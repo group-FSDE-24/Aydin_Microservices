@@ -8,17 +8,17 @@ namespace ProductWebAPI.Controllers;
 [ApiController]
 public class OrderController : ControllerBase
 {
-    private readonly IOrderRepo _productRepo;
+    private readonly IOrderRepo _orderRepo;
 
-    public OrderController(IOrderRepo productRepo)
+    public OrderController(IOrderRepo orderRepo)
     {
-        _productRepo = productRepo;
+        _orderRepo = orderRepo;
     }
 
     [HttpGet("GetAll")]
     public IActionResult GetAll()
     {
-        var result = _productRepo.GetAll();
+        var result = _orderRepo.GetAll();
 
         if (result.Count == 0) return NotFound("Depoda mehsul yoxdur");
 
@@ -28,16 +28,16 @@ public class OrderController : ControllerBase
     [HttpGet("GetById/{id}")]
     public IActionResult GetById(int id)
     {
-        var result = _productRepo.GetById(id);
+        var result = _orderRepo.GetById(id);
 
 
         return result is null ? BadRequest("Product tapilmadi") : Ok(result);
     }
 
     [HttpPost]
-    public IActionResult AddProduct([FromBody] Order product)
+    public IActionResult AddOrder([FromBody] Order product)
     {
-        _productRepo.Add(product);
+        _orderRepo.Add(product);
         return Ok("Product elave edildi");
     }
 }
