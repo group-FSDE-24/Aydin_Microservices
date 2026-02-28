@@ -20,7 +20,7 @@ public class CustomerController : ControllerBase
     {
         var result = _orderRepo.GetAll();
 
-        if (result.Count == 0) return NotFound("Depoda mehsul yoxdur");
+        if (result.Count == 0) return NotFound("Customer yoxdur");
 
         return Ok(result);
     }
@@ -31,13 +31,13 @@ public class CustomerController : ControllerBase
         var result = _orderRepo.GetById(id);
 
 
-        return result is null ? BadRequest("Product tapilmadi") : Ok(result);
+        return result is null ? BadRequest("Customer tapilmadi") : Ok(result);
     }
 
     [HttpPost]
     public IActionResult AddCustomer([FromBody] Customer product)
     {
         _orderRepo.Add(product);
-        return Ok("Product elave edildi");
+        return Ok("Customer elave edildi");
     }
 }
