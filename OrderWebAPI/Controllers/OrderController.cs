@@ -34,7 +34,7 @@ public class OrderController : ControllerBase
         return result is null ? BadRequest("Order tapilmadi") : Ok(result);
     }
 
-    [HttpPost]
+    [HttpPost("AddOrder")]
     public IActionResult AddOrder([FromBody] Order product)
     {
         _orderRepo.Add(product);

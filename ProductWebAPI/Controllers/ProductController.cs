@@ -25,8 +25,8 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("GetByProductId/{id}")]
-    public IActionResult GetByProductId(int id)
+    [HttpGet("GetProductById/{id}")]
+    public IActionResult GetProductById(int id)
     {
         var result = _productRepo.GetById(id);
 
@@ -34,7 +34,7 @@ public class ProductController : ControllerBase
         return result is null ? BadRequest("Product tapilmadi") : Ok(result);
     }
 
-    [HttpPost]
+    [HttpPost("AddProduct")]
     public IActionResult AddProduct([FromBody] Product product)
     {
         _productRepo.Add(product);

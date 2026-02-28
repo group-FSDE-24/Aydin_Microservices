@@ -34,7 +34,7 @@ public class CustomerController : ControllerBase
         return result is null ? BadRequest("Customer tapilmadi") : Ok(result);
     }
 
-    [HttpPost]
+    [HttpPost("AddCustomer")]
     public IActionResult AddCustomer([FromBody] Customer product)
     {
         _orderRepo.Add(product);
