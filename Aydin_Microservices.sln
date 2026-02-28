@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductMicroService", "ProductMicroService", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomerMicroService", "CustomerMicroService", "{BB589145-7B1E-4823-9086-BE9E14D07C32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductWebAPI", "ProductWebAPI\ProductWebAPI.csproj", "{70B1F04F-39C0-4573-88F3-187D711FFBCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderWebAPI", "OrderWebAPI\OrderWebAPI.csproj", "{698B59C3-67CB-4958-A716-85C7CEB0E4D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +23,17 @@ Global
 		{70B1F04F-39C0-4573-88F3-187D711FFBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B1F04F-39C0-4573-88F3-187D711FFBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B1F04F-39C0-4573-88F3-187D711FFBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698B59C3-67CB-4958-A716-85C7CEB0E4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698B59C3-67CB-4958-A716-85C7CEB0E4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698B59C3-67CB-4958-A716-85C7CEB0E4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698B59C3-67CB-4958-A716-85C7CEB0E4D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{70B1F04F-39C0-4573-88F3-187D711FFBCC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{698B59C3-67CB-4958-A716-85C7CEB0E4D0} = {16783B60-6749-4908-BAE8-EA8F5CD4953B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E876581-E0FB-4E72-AF4B-08417C1B1096}
