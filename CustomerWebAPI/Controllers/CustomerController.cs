@@ -6,17 +6,17 @@ namespace ProductWebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class OrderController : ControllerBase
+public class CustomerController : ControllerBase
 {
-    private readonly IOrderRepo _orderRepo;
+    private readonly ICustomerRepo _orderRepo;
 
-    public OrderController(IOrderRepo orderRepo)
+    public CustomerController(ICustomerRepo orderRepo)
     {
         _orderRepo = orderRepo;
     }
 
-    [HttpGet("GetAllOrder")]
-    public IActionResult GetAllOrder()
+    [HttpGet("GetAllCustomer")]
+    public IActionResult GetAllCustomer()
     {
         var result = _orderRepo.GetAll();
 
@@ -25,8 +25,8 @@ public class OrderController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("GetOrderById/{id}")]
-    public IActionResult GetOrderById(int id)
+    [HttpGet("GetCustomerById/{id}")]
+    public IActionResult GetCustomerById(int id)
     {
         var result = _orderRepo.GetById(id);
 
@@ -35,7 +35,7 @@ public class OrderController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult AddOrder([FromBody] Order product)
+    public IActionResult AddCustomer([FromBody] Customer product)
     {
         _orderRepo.Add(product);
         return Ok("Product elave edildi");

@@ -15,8 +15,8 @@ public class ProductController : ControllerBase
         _productRepo = productRepo;
     }
 
-    [HttpGet("GetAll")]
-    public IActionResult GetAll()
+    [HttpGet("GetAllProduct")]
+    public IActionResult GetAllProduct()
     {
         var result = _productRepo.GetAll();
 
@@ -25,8 +25,8 @@ public class ProductController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("GetById/{id}")]
-    public IActionResult GetById(int id)
+    [HttpGet("GetByProductId/{id}")]
+    public IActionResult GetByProductId(int id)
     {
         var result = _productRepo.GetById(id);
 
